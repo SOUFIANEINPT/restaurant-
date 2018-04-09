@@ -16,14 +16,8 @@ class CreateTabelsTable extends Migration
         Schema::create('tabels', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('categories_id');
-            $table->integer('menu_id');
             $table->string('Nombrechaire');
             $table->timestamps();
-            $table->foreign('categories_id')->references('id')->on('categories')
-            ->onDelete('cascade');
-            $table->foreign('menu_id')->references('id')->on('')
-            ->onDelete('cascade');
         });
     }
 

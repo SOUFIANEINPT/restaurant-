@@ -15,12 +15,12 @@ class CreateResrvationsTable extends Migration
     {
         Schema::create('resrvations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('table_id')->unique();
-            $table->integer('user_id');
             $table->boolean('type');
-            $table->date('dateDebut');
-            $table->date('dateFin');
+            $table->boolean('experation');
+            $table->timestamp('dateDebut');
+            $table->timestamp('dateFin');
             $table->timestamps();
+
         });
     }
 
