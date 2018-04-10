@@ -20,6 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('admin', 'AdminRegisterConctroller')->middleware('can:admin');
 Route::post('admin/store','AdminRegisterConctroller@register')->name('admin.store');
 Route::post('admin/{admin}/edit','AdminRegisterConctroller@edit')->name('admin.edit');
-Route::resource('table','TableController');
+Route::resource('table','TableController')->except([
+    'indexAdmin']);
+Route::get('Admin/table','TableController@indexAdmin')->name('table.indexAdmin');
 Route::resource('facture','FactureController');
 Route::resource('reserve','ReserveController');

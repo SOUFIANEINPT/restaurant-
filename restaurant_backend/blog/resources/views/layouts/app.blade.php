@@ -12,9 +12,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/countdown.js') }}" defer></script>
+    <script src="{{ asset('js/CreatTable.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="http://cdn.rawgit.com/hilios/jQuery.countdown/2.1.0/dist/jquery.countdown.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     
     <!-- Fonts -->

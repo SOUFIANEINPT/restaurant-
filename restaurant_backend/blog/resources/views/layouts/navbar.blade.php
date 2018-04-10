@@ -10,14 +10,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav mr-auto">
-           @auth
+           @auth    
+           @can('admin')
+           <li><a class="nav-link {{ active('admin.create') }}"  href="{{ route('admin.create') }}">{{ __('Creat User') }}</a></li>
+           <li><a class="nav-link {{ active('table.create') }}"  href="{{ route('table.create') }}">{{ __('Creat Table') }}</a></li>
+           <li><a class="nav-link {{ active('admin.index') }}"  href="{{ route('admin.index') }}">{{ __('Users') }}</a></li>
+           <li><a class="nav-link {{ active('table.indexAdmin') }}"  href="{{ route('table.indexAdmin') }}">{{ __('Tables') }}</a></li>
+           @elsecan('user')
+           <li><a class="nav-link {{ active('facture.index') }}"  href="{{ route('table.index') }}">{{ __('Factures') }}</a></li>
            <li><a class="nav-link {{ active('table.index') }}"  href="{{ route('table.index') }}">{{ __('Tables') }}</a></li>
            <li><a class="nav-link {{ active('reserve.index') }}"  href="{{ route('table.index') }}">{{ __('My reservations') }}</a></li>
-           <li><a class="nav-link {{ active('facture.index') }}"  href="{{ route('table.index') }}">{{ __('Factures') }}</a></li>    
-           @can('admin')
-               <li><a class="nav-link {{ active('admin.create') }}"  href="{{ route('admin.create') }}">{{ __('Creat User') }}</a></li>
-               <li><a class="nav-link {{ active('admin.index') }}"  href="{{ route('admin.index') }}">{{ __('Users') }}</a></li>
-               @endcan
+           @endcan
            @endauth
           </ul>
 

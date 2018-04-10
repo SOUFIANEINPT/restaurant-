@@ -8,7 +8,7 @@
 </div>
 @if (isset($id))
 <div  style="position:absolute;width:18rem;height:96%;opacity:0.8;filter: alpha(opacity=80);
-background-color: lightblue;;z-index:900;margin-top:-458px;border-radius:5px" data-id="{{$id}}" data-value="{{$table->dateFin}}" >
+background-color: lightblue;;z-index:900;margin-top:-456px;border-radius:5px" data-id="{{$id}}" data-value="{{$table->dateFin}}" >
 <h3 class="text-center" style="margin-top:20%;font-weight: bold;">
   this table has been availble in 
 </h3>

@@ -10,4 +10,8 @@ class Menu extends Model
     {
         return $this->hasMany('App\Product');
     }
+    public function AllMenu()
+    {
+        return Menu::all();
+    }
 }
